@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <meta http-equiv="refresh" content="5">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Panel</h1>
+  <p>This page will reload every 5 seconds.</p>
+  <table id="logsTable">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- rows add here-->
+    </tbody>
+  </table>
+  <script>
+    fetch("http://localhost:3000/logs")
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Network response was not ok.");
+        }
+      })
+      .then(data => {
+        const tableBody = document.querySelector("#logsTable tbody");
+        tableBody.innerHTML = ""; // Clear existing rows
+
+        // Populate the table with fetched data
+        data.forEach(log => {
+          const row = document.createElement("tr");
+
+          const timestampCell = document.createElement("td");
+          timestampCell.innterHTML = log.timestamp;
+          row.appendChild(timestampCell);
+
+          const messageCell = document.createElement("td");
+          messageCell.innerHTML = log.message;
+          row.appendChild(messageCell);
+
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+        fetch("http://localhost:3000/flag?key=adminadminadmin")
+          .then(response => {
+            if (response.ok) {
+              return response.json();
+            } else {
+              throw new Error("Network response was not ok.");
+            }
+          })
+          .then(data => {
+            const flag = data.flag;
+            localStorage.setItem("FLAG", flag); // Store the flag in localStorage
+            console.log("FLAG stored in localStorage:", flag);
+          })
+          .catch(error => {
+            console.error("There was a problem fetching the flag:", error);
+          });
+  </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baylor University - PATH to Research Excellence</title>
+  <style>
+    :root {
+      --baylor-green: #154734;
+      --baylor-gold: #FFC629;
+      --light-gold: rgba(255, 198, 41, 0.15);
+      --white: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--baylor-green);
+      background-image: linear-gradient(135deg, rgba(21, 71, 52, 0.98) 0%, rgba(21, 71, 52, 0.9) 100%), url('/api/placeholder/1600/900');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+    
+    .header {
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+    
+    .university-logo {
+      width: 80px;
+      height: 80px;
+      background-color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 6px 15px var(--shadow);
+      overflow: hidden;
+    }
+    
+    .main-title {
+      color: var(--baylor-gold);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .subtitle {
+      color: var(--baylor-gold);
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .content-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 1000px;
+      padding: 30px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .content-container:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: var(--baylor-gold);
+    }
+    
+    .description {
+      color: var(--baylor-green);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    
+    .highlight {
+      background-color: var(--baylor-gold);
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    
+    .decorative-element {
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 150px;
+      height: 150px;
+      background-color: rgba(255, 198, 41, 0.1);
+      border-radius: 50%;
+      z-index: -1;
+    }
+    
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <script>
+    window.onload=function() {
+        alert("Bruiser Here!\n\nCan you bust your way to flag.php? We hid it somewhere in this website!\n\nHint: It has nothing to do with Pro Futuris.");
+    };
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="university-logo">
+      <img src="./logo.webp" alt="Baylor University Logo" style="max-width: 60px; max-height: 60px;" />
+    </div>
+    <h1 class="main-title">Welcome to Baylor University</h1>
+    <h2 class="subtitle">From "Baylor Regents Approve Pro Futuris, New Strategic Vision To Guide University Progress in Coming Decade"</h2>
+  </div>  
+  <div class="content-container">
+    <div class="decorative-element"></div>
+    <p class="description">
+        Pro Futuris will guide the University's <span class="highlight">PATH</span> over the next decade. The vision 
+        will go into effect on June 1, 2012. ... Pro Futuris defines the University's 
+        principal <span class="highlight">DIR</span>ection. 
+    </p>
+  </div>
+</body>
+</html>
